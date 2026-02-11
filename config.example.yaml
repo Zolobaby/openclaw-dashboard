@@ -1,0 +1,98 @@
+# OpenClaw Dashboard Monitor - 配置示例
+# 复制此文件为 config.yaml 并修改
+
+# ==========================================
+# 网关配置
+# ==========================================
+gateway:
+  host: "127.0.0.1"
+  port: 18789              # OpenClaw Gateway 端口
+  api_port: 18789          # API 端口
+  check_interval: 60       # 健康检查间隔(秒)
+
+# ==========================================
+# 监控配置
+# ==========================================
+monitoring:
+  enabled: true
+  data_dir: "./data"       # 数据存储目录
+  log_level: "INFO"         # DEBUG/INFO/WARNING/ERROR
+  
+  # 告警阈值
+  alerts:
+    error_burst_count: 5    # 错误爆发阈值
+    error_burst_minutes: 5  # 时间窗口(分钟)
+    frequency_threshold: 100 # 频率异常阈值
+
+# ==========================================
+# 通道配置
+# ==========================================
+channels:
+  feishu:
+    name: "飞书"
+    enabled: true
+    type: "primary"
+    
+  telegram:
+    name: "Telegram"
+    enabled: true
+    type: "backup"
+    
+  bluebubbles:
+    name: "BlueBubbles"
+    enabled: true
+    type: "secondary"
+    
+  imessage:
+    name: "iMessage"
+    enabled: true
+    type: "secondary"
+
+# ==========================================
+# 成本配置
+# ==========================================
+costs:
+  daily_budget: 10.0       # 每日预算警告
+  monthly_budget: 500.0    # 每月预算警告
+  prediction_days: 30      # 预测天数
+
+# ==========================================
+# 自动恢复配置
+# ==========================================
+recovery:
+  enabled: true
+  check_interval: 120      # 检查间隔(秒)
+  failure_threshold: 3     # 失败次数阈值
+  restart_attempts: 3      # 重启尝试次数
+  cooldown_minutes: 5      # 冷却时间(分钟)
+  graceful_timeout: 30     # 优雅停止超时(秒)
+  restart_wait: 30         # 重启等待(秒)
+
+# ==========================================
+# Dashboard配置
+# ==========================================
+dashboard:
+  host: "0.0.0.0"
+  port: 8888               # Dashboard 端口
+  api_port: 18888          # API 服务器端口
+  
+# ==========================================
+# 通知配置
+# ==========================================
+notifications:
+  feishu:
+    enabled: false
+    webhook_url: ""        # 飞书Webhook地址
+    
+  telegram:
+    enabled: false
+    bot_token: ""
+    chat_id: ""
+    
+  email:
+    enabled: false
+    smtp_server: ""
+    smtp_port: 587
+    sender_email: ""
+    sender_password: ""
+    receiver_email: ""

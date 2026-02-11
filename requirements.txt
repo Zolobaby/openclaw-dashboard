@@ -1,0 +1,23 @@
+# OpenClaw Dashboard Monitor - Python依赖
+
+# 核心依赖
+flask>=2.0.0
+requests>=2.25.0
+
+# 监控相关（Python 3内置）
+sqlite3
+json
+datetime
+http.server
+threading
+subprocess
+urllib
+signal
+os
+sys
+pathlib
+
+# 可选：增强功能
+# pandas>=1.3.0    # 数据分析
+# matplotlib>=3.4.0 # 图表绘制
+# plotly>=5.0.0    # 交互式图表
