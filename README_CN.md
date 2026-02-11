@@ -14,6 +14,29 @@
 
 ---
 
+## 📸 界面预览
+
+<div align="center">
+
+![Dashboard概览](screenshots/dashboard-overview.jpg)
+*统一监控Dashboard - 一站式查看所有状态*
+
+![网关状态](screenshots/gateway-status.jpg)
+*网关实时状态监控*
+
+![成本追踪](screenshots/cost-tracking.jpg)
+*成本追踪与趋势分析*
+
+![异常检测](screenshots/anomaly-detection.jpg)
+*智能异常检测与告警*
+
+![系统监控](screenshots/system-monitor.jpg)
+*系统监控命令行工具*
+
+</div>
+
+---
+
 ## ✨ 特性
 
 - 🖥️ **实时网关监控** - 端口、延迟、健康状态
