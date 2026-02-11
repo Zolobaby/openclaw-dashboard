@@ -2,6 +2,11 @@
 """
 Kuro监控API服务器
 为Dashboard提供实时成本、性能和日志数据
+
+版本: 2.0.0
+作者: Kuro (TakumiKou)
+更新: 2026-02-11
+许可证: MIT
 """
 
 import json
